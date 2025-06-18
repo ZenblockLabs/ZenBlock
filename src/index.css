@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* --background: 255 255 255; */
+    --foreground: 28 28 28;
+
+    --card: 255 255 255;
+    --card-foreground: 28 28 28;
+
+    --popover: 255 255 255;
+    --popover-foreground: 28 28 28;
+
+    --primary: 46 196 241;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 205 198 231;
+    --secondary-foreground: 28 28 28;
+
+    --muted: 214 245 227;
+    --muted-foreground: 74 74 74;
+
+    --accent: 205 198 231;
+    --accent-foreground: 28 28 28;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 224 224 224;
+    --input: 224 224 224;
+    --ring: 46 196 241;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 27 31 59;
+    --sidebar-foreground: 242 242 242;
+    --sidebar-primary: 46 196 241;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 205 198 231;
+    --sidebar-accent-foreground: 28 28 28;
+    --sidebar-border: 74 74 74;
+    --sidebar-ring: 46 196 241;
+  }
+
+  .dark {
+    --background: 27 31 59;
+    --foreground: 242 242 242;
+
+    --card: 27 31 59;
+    --card-foreground: 242 242 242;
+
+    --popover: 27 31 59;
+    --popover-foreground: 242 242 242;
+
+    --primary: 46 196 241;
+    --primary-foreground: 27 31 59;
+
+    --secondary: 74 74 74;
+    --secondary-foreground: 242 242 242;
+
+    --muted: 74 74 74;
+    --muted-foreground: 190 190 190;
+
+    --accent: 74 74 74;
+    --accent-foreground: 242 242 242;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 242 242 242;
+
+    --border: 74 74 74;
+    --input: 74 74 74;
+    --ring: 46 196 241;
+
+    --sidebar-background: 27 31 59;
+    --sidebar-foreground: 242 242 242;
+    --sidebar-primary: 46 196 241;
+    --sidebar-primary-foreground: 27 31 59;
+    --sidebar-accent: 74 74 74;
+    --sidebar-accent-foreground: 242 242 242;
+    --sidebar-border: 74 74 74;
+    --sidebar-ring: 46 196 241;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html, body, #root {
+    background-color: hsl(var(--background));
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, #1B1F3B 0%, #2EC4F1 100%);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-zenblock-electric-blue to-zenblock-pharma-green bg-clip-text text-transparent;
+  }
+}
